@@ -755,7 +755,11 @@ img{max-width:100%;display:block}
   <div class="container section">
     <span class="eyebrow">Inteligencia salarial</span>
     <h2 class="section-title">Salary Benchmark</h2>
-    <p class="section-sub" style="margin-bottom:30px">Consultá rangos salariales de mercado por puesto, seniority, industria y ubicación. Datos curados por el equipo de Grow UP.</p>
+    <p class="section-sub" style="margin-bottom:10px">Consultá rangos salariales de mercado por puesto, seniority, industria y ubicación. Datos curados por el equipo de Grow UP.</p>
+    <div class="disclaimer" style="margin-bottom:30px">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+      <span>Estos valores son orientativos, pensados como punto de partida — no provienen de una encuesta oficial única. Para IT te recomendamos cruzarlos con la <a href="https://sysarmy.com/blog/tags/sueldos/" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline">encuesta de sueldos de Sysarmy</a>. Podés editar, agregar o quitar registros en Admin → Salary Benchmark con tus propios datos de mercado.</span>
+    </div>
 
     <div class="bench-filters">
       <div class="bench-filter-grid">
@@ -1101,14 +1105,50 @@ const SEED_BENCHMARKS = [
   {id:8, puesto:'Asistente de Marketing', seniority:'Junior', industria:'Comercio / Retail', ubicacion:'Interior', min:750000, prom:980000, max:1250000},
   {id:9, puesto:'DevOps Engineer', seniority:'Senior', industria:'IT / Software', ubicacion:'Remoto', min:2200000, prom:2950000, max:3900000},
   {id:10, puesto:'Diseñador UX/UI', seniority:'Semi Senior', industria:'IT / Software', ubicacion:'GBA', min:1250000, prom:1650000, max:2100000},
+  {id:11, puesto:'Desarrollador Backend', seniority:'Junior', industria:'IT / Software', ubicacion:'CABA', min:950000, prom:1250000, max:1600000},
+  {id:12, puesto:'Desarrollador Frontend', seniority:'Semi Senior', industria:'IT / Software', ubicacion:'GBA', min:1300000, prom:1700000, max:2150000},
+  {id:13, puesto:'Desarrollador Frontend', seniority:'Junior', industria:'IT / Software', ubicacion:'Remoto', min:900000, prom:1200000, max:1550000},
+  {id:14, puesto:'QA Automation', seniority:'Senior', industria:'IT / Software', ubicacion:'CABA', min:1850000, prom:2450000, max:3150000},
+  {id:15, puesto:'QA Manual', seniority:'Semi Senior', industria:'IT / Software', ubicacion:'GBA', min:1100000, prom:1450000, max:1850000},
+  {id:16, puesto:'Data Analyst', seniority:'Semi Senior', industria:'IT / Software', ubicacion:'CABA', min:1300000, prom:1700000, max:2200000},
+  {id:17, puesto:'Data Scientist', seniority:'Senior', industria:'IT / Software', ubicacion:'Remoto', min:2300000, prom:3100000, max:4000000},
+  {id:18, puesto:'DevOps Engineer', seniority:'Semi Senior', industria:'IT / Software', ubicacion:'CABA', min:1700000, prom:2250000, max:2900000},
+  {id:19, puesto:'SRE', seniority:'Senior', industria:'IT / Software', ubicacion:'Remoto', min:2400000, prom:3200000, max:4100000},
+  {id:20, puesto:'Diseñador UX/UI', seniority:'Senior', industria:'IT / Software', ubicacion:'CABA', min:1900000, prom:2500000, max:3200000},
+  {id:21, puesto:'Diseñador UX/UI', seniority:'Junior', industria:'IT / Software', ubicacion:'GBA', min:900000, prom:1200000, max:1550000},
+  {id:22, puesto:'Mobile Developer (iOS/Android)', seniority:'Semi Senior', industria:'IT / Software', ubicacion:'Remoto', min:1500000, prom:2000000, max:2600000},
+  {id:23, puesto:'Analista de Ciberseguridad', seniority:'Senior', industria:'IT / Software', ubicacion:'CABA', min:2200000, prom:2950000, max:3800000},
+  {id:24, puesto:'Scrum Master', seniority:'Senior', industria:'IT / Software', ubicacion:'CABA', min:2000000, prom:2700000, max:3500000},
+  {id:25, puesto:'Soporte Técnico', seniority:'Semi Senior', industria:'IT / Servicios', ubicacion:'GBA', min:1000000, prom:1300000, max:1650000},
+  {id:26, puesto:'Analista de Sistemas', seniority:'Junior', industria:'IT / Servicios', ubicacion:'Interior', min:700000, prom:900000, max:1150000},
+  {id:27, puesto:'Vendedor/a', seniority:'Junior', industria:'Comercio / Retail', ubicacion:'Interior', min:600000, prom:780000, max:980000},
+  {id:28, puesto:'Encargado/a de Sucursal', seniority:'Semi Senior', industria:'Comercio / Retail', ubicacion:'GBA', min:950000, prom:1250000, max:1600000},
+  {id:29, puesto:'Cajero/a', seniority:'Junior', industria:'Comercio / Retail', ubicacion:'CABA', min:650000, prom:830000, max:1050000},
+  {id:30, puesto:'Analista Contable', seniority:'Semi Senior', industria:'Administración y Finanzas', ubicacion:'CABA', min:1000000, prom:1350000, max:1750000},
+  {id:31, puesto:'Analista de Tesorería', seniority:'Senior', industria:'Administración y Finanzas', ubicacion:'CABA', min:1500000, prom:2000000, max:2600000},
+  {id:32, puesto:'Administrativo/a', seniority:'Junior', industria:'Administración y Finanzas', ubicacion:'GBA', min:650000, prom:850000, max:1100000},
+  {id:33, puesto:'Generalista de RRHH', seniority:'Semi Senior', industria:'Recursos Humanos', ubicacion:'CABA', min:1100000, prom:1450000, max:1850000},
+  {id:34, puesto:'Reclutador/a IT', seniority:'Semi Senior', industria:'Recursos Humanos', ubicacion:'Remoto', min:1150000, prom:1500000, max:1950000},
+  {id:35, puesto:'Community Manager', seniority:'Junior', industria:'Marketing', ubicacion:'CABA', min:700000, prom:900000, max:1150000},
+  {id:36, puesto:'Marketing Digital', seniority:'Semi Senior', industria:'Marketing', ubicacion:'GBA', min:1050000, prom:1400000, max:1800000},
+  {id:37, puesto:'Agente de Call Center', seniority:'Junior', industria:'Atención al Cliente', ubicacion:'Interior', min:550000, prom:720000, max:900000},
+  {id:38, puesto:'Analista de Logística', seniority:'Semi Senior', industria:'Logística', ubicacion:'GBA', min:900000, prom:1200000, max:1550000},
 ];
 
+// Cuotas sindicales aproximadas: cada gremio las fija por asamblea y pueden cambiar.
+// No hay una fuente pública única y centralizada que las liste todas — confirmá el valor
+// exacto en el recibo de sueldo o con RRHH, y ajustalo acá en Admin → Convenios si hace falta.
 const SEED_CONVENIOS = [
-  {id:1, nombre:'Comercio', sigla:'CCT 130/75', cuota:2.5, adicional:0.5},
-  {id:2, nombre:'Software y Servicios Informáticos', sigla:'CCT 1554/19', cuota:1, adicional:0},
-  {id:3, nombre:'Construcción (UOCRA)', sigla:'CCT 76/75', cuota:3, adicional:2},
-  {id:4, nombre:'Metalúrgicos (UOM)', sigla:'CCT 260/75', cuota:2.5, adicional:1},
-  {id:5, nombre:'Fuera de convenio', sigla:'—', cuota:0, adicional:0},
+  {id:1, nombre:'Fuera de convenio / Sin convenio', sigla:'—', cuota:0, adicional:0},
+  {id:2, nombre:'Comercio', sigla:'CCT 130/75', cuota:2.5, adicional:0.5},
+  {id:3, nombre:'Software y Servicios Informáticos', sigla:'CCT 1554/19', cuota:1, adicional:0},
+  {id:4, nombre:'Construcción (UOCRA)', sigla:'CCT 76/75', cuota:3, adicional:2},
+  {id:5, nombre:'Metalúrgicos (UOM)', sigla:'CCT 260/75', cuota:2.5, adicional:1},
+  {id:6, nombre:'Sanidad (FATSA)', sigla:'CCT 122/75', cuota:2.5, adicional:0},
+  {id:7, nombre:'Bancarios (Asociación Bancaria)', sigla:'CCT 18/75', cuota:2.5, adicional:0},
+  {id:8, nombre:'Gastronómicos (UTHGRA)', sigla:'CCT 389/04', cuota:2.5, adicional:0},
+  {id:9, nombre:'Camioneros y Transporte', sigla:'CCT 40/89', cuota:2.5, adicional:0},
+  {id:10, nombre:'Seguros', sigla:'CCT 60/89', cuota:2.5, adicional:0},
 ];
 
 /* ---------- STATE ---------- */
@@ -1173,14 +1213,32 @@ function toggleTheme(){
 }
 
 /* ---------- NAVEGACIÓN ---------- */
-function go(page){
+/* ============================================================
+   ROUTER — hash-based, para que el botón Atrás del navegador
+   funcione al entrar y salir de las calculadoras.
+   ============================================================ */
+function activatePage(page){
   document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
-  $('page-'+page).classList.add('active');
+  const el = $('page-'+page);
+  if(el) el.classList.add('active');
   document.querySelectorAll('.nav-link[data-nav]').forEach(l=>l.classList.toggle('active', l.dataset.nav===page));
-  window.scrollTo({top:0,behavior:'smooth'});
-  if(page==='tools'){ showToolsGrid(); }
-  if(page==='benchmark'){ runBenchmark(); }
 }
+function handleRoute(){
+  const h = location.hash.replace(/^#\/?/,'');
+  const parts = h.split('/').filter(Boolean);
+  const page = $('page-'+parts[0]) ? parts[0] : 'home';
+  activatePage(page);
+  if(page==='tools'){
+    if(parts[1]) openToolRender(parts[1]); else showToolsGridRender();
+  }
+  if(page==='benchmark'){ runBenchmark(); }
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+function navigate(hash){
+  if(location.hash===hash){ handleRoute(); } else { location.hash=hash; }
+}
+window.addEventListener('hashchange', handleRoute);
+function go(page){ navigate('#/'+page); }
 function toggleMobileNav(){ $('mobileNav').classList.toggle('open'); }
 
 /* ---------- INIT ---------- */
@@ -1198,6 +1256,7 @@ function init(){
   renderAdminDashboard();
   $('stat-bench').textContent = BENCHMARKS.length;
   fetchFX();
+  handleRoute();
 }
 
 /* ---------- CONTACTO + REDES ---------- */
@@ -1245,7 +1304,6 @@ const ICONS = {
   'costo-empresa':'<path d="M3 21h18M5 21V7l8-4v18M19 21V11l-6-3M9 9v.01M9 13v.01M9 17v.01"/>',
   bench:'<line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/>',
   fee:'<path d="M20 7h-9M14 17H5M17 17a3 3 0 100-6 3 3 0 000 6zM7 13a3 3 0 100-6 3 3 0 000 6z"/>',
-  'conversor-int':'<circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 010 20 15 15 0 010-20z"/>',
 };
 
 const TOOLS = [
@@ -1260,8 +1318,6 @@ const TOOLS = [
   {id:'bench-emp', cat:'empresas', name:'Salary Benchmark', desc:'Rangos salariales de mercado para definir tus ofertas.', goesToBench:true},
   // RECRUITERS
   {id:'fee', cat:'recruiters', name:'Recruiting Fee Calculator', desc:'Calculá tu honorario, IVA y total facturable por búsqueda.'},
-  {id:'bench-rec', cat:'recruiters', name:'Salary Benchmark', desc:'Misma base de datos salarial para tus procesos.', goesToBench:true},
-  {id:'conversor-int', cat:'recruiters', name:'Conversor Salarial Internacional', desc:'Sueldos mensual/anual entre USD y ARS para perfiles globales.'},
 ];
 
 const CATS = {
@@ -1519,17 +1575,15 @@ function renderToolsGrid(){
   }).join('');
 }
 
-function showToolsGrid(){
+function showToolsGridRender(){
   $('tools-grid-view').style.display='block';
   $('tool-detail').classList.remove('active');
 }
+function showToolsGrid(){ navigate('#/tools'); }
 
 // Navega a Herramientas y hace scroll al bloque de la categoría elegida
 function goToCat(cat){
-  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
-  $('page-tools').classList.add('active');
-  document.querySelectorAll('.nav-link[data-nav]').forEach(l=>l.classList.toggle('active', l.dataset.nav==='tools'));
-  showToolsGrid();
+  go('tools');
   // esperar a que la página sea visible y luego hacer scroll
   setTimeout(()=>{
     const el = $('catblock-'+cat);
@@ -1544,11 +1598,10 @@ function goToCat(cat){
 /* ============================================================
    TOOL DETAIL ROUTER
    ============================================================ */
-function openTool(id){
+function openToolRender(id){
   const tool = TOOLS.find(t=>t.id===id);
   if(!tool) return;
-  if(tool.goesToBench){ go('benchmark'); return; }
-  go('tools');
+  if(tool.goesToBench){ activatePage('benchmark'); runBenchmark(); return; }
   $('tools-grid-view').style.display='none';
   const dv = $('tool-detail');
   dv.className = 'tool-view active tv-'+tool.cat;
@@ -1560,8 +1613,13 @@ function openTool(id){
     </div>
     <div id="tool-body"></div>
     ${DISCLAIMER_HTML}`;
-  window.scrollTo({top:0,behavior:'smooth'});
   RENDERERS[id] && RENDERERS[id]();
+}
+function openTool(id){
+  const tool = TOOLS.find(t=>t.id===id);
+  if(!tool) return;
+  if(tool.goesToBench){ go('benchmark'); return; }
+  navigate('#/tools/'+id);
 }
 
 // Disclaimer general, presente en todas las calculadoras
@@ -1578,7 +1636,6 @@ const RENDERERS = {
   usd: renderUSD,
   'costo-empresa': renderCostoEmpresa,
   fee: renderFee,
-  'conversor-int': renderConversorInt,
 };
 
 
@@ -1611,10 +1668,11 @@ function renderSalario(){
           <input class="input" id="sal-hijos" type="number" min="0" value="0" oninput="calcSalarioUI()">
         </div>
         <div class="field">
-          <label class="field-label">Convenio</label>
+          <label class="field-label">Convenio <span class="field-hint">(define la cuota sindical)</span></label>
           <select class="select" id="sal-convenio" onchange="calcSalarioUI()">${conv}</select>
         </div>
       </div>
+      <div class="field-hint" style="margin:-8px 0 4px">Las cuotas son aproximadas y cada gremio puede fijar un valor distinto — verificá el % exacto en tu recibo de sueldo. Si no estás bajo convenio, dejá "Fuera de convenio".</div>
 
       <div class="check-row" id="sal-conyuge-row" onclick="toggleCheck('sal-conyuge',calcSalarioUI)">
         <div class="switch"></div>
@@ -1663,7 +1721,7 @@ function setSalMode(m){
 }
 function calcSalarioUI(){
   const monto = parseNum($('sal-monto').value);
-  if(!monto){ return; }
+  if(!monto){ $('sal-result').innerHTML = '<div class="result-empty"><p>Ingresá un salario para ver el desglose completo.</p></div>'; return; }
   const conv = CONVENIOS.find(c=>c.id===parseInt($('sal-convenio').value));
   const r = calcSalario({
     modo:salMode, monto,
@@ -1703,10 +1761,17 @@ function calcSalarioUI(){
       <div class="bd-row sub"><span class="bd-label">Total deducciones</span><span class="bd-value neg">−${money(r.totalAportes+r.gan)}</span></div>
       <div class="bd-row total"><span class="bd-label">Neto estimado</span><span class="bd-value pos">${money(r.neto)}</span></div>
     </div>
+    ${(PARAMS.gan_activa && r.gan<=0.5 && (input_hasGananciasExtras()))?`<div class="disclaimer">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+      <span>Con este sueldo la Ganancia neta sujeta a impuesto ya da $0 antes de aplicar cónyuge/hijos/alquiler/prepaga — por eso esas opciones no cambian el neto. Sólo tienen efecto si el sueldo es lo bastante alto como para tributar Ganancias.</span>
+    </div>`:''}
     <div class="disclaimer">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
       <span>Estimación orientativa basada en la normativa vigente (aportes ${PARAMS.aporte_jubilacion+PARAMS.aporte_obra_social+PARAMS.aporte_pami}% + escala de Ganancias). No reemplaza tu recibo de sueldo ni el asesoramiento de un contador. Ganancias depende del acumulado anual y del F.572.</span>
     </div>`;
+}
+function input_hasGananciasExtras(){
+  return $('sal-conyuge').checked || (parseInt($('sal-hijos').value)||0)>0 || $('sal-alquila').checked || $('sal-prepaga').checked;
 }
 
 /* ============================================================
@@ -1724,12 +1789,13 @@ function renderAguinaldo(){
       <div class="field">
         <label class="field-label">Semestre</label>
         <div class="toggle-group">
-          <div class="toggle-opt active" data-s="1" onclick="setAgSem(1)">1° semestre (Jun)</div>
-          <div class="toggle-opt" data-s="2" onclick="setAgSem(2)">2° semestre (Dic)</div>
+          <div class="toggle-opt${agSem===1?' active':''}" data-s="1" onclick="setAgSem(1)">1° semestre (Jun)</div>
+          <div class="toggle-opt${agSem===2?' active':''}" data-s="2" onclick="setAgSem(2)">2° semestre (Dic)</div>
         </div>
+        <div class="field-hint" style="margin-top:6px">El aguinaldo (SAC) se paga dos veces al año: la 1° cuota se cobra hasta el 30/6 por lo trabajado entre enero y junio, y la 2° cuota hasta el 18/12 por lo trabajado entre julio y diciembre. Elegí la cuota que querés calcular.</div>
       </div>
       <div class="field">
-        <label class="field-label">Fecha de ingreso <span class="field-hint">(si ingresaste en el semestre)</span></label>
+        <label class="field-label">Fecha de ingreso <span class="field-hint">(solo si ingresaste durante ese semestre)</span></label>
         <input class="input" id="ag-ingreso" type="date" onchange="calcAguinaldoUI()">
       </div>
     </div>
@@ -1743,11 +1809,11 @@ function renderAguinaldo(){
   </div>`;
   attachMoneyFormat('ag-salario');
 }
-let agSem=1;
+let agSem = (new Date().getMonth()<6) ? 1 : 2;
 function setAgSem(s){agSem=s;document.querySelectorAll('#tool-body .toggle-opt').forEach(o=>o.classList.toggle('active',o.dataset.s==s));calcAguinaldoUI();}
 function calcAguinaldoUI(){
   const salario = parseNum($('ag-salario').value);
-  if(!salario) return;
+  if(!salario){ $('ag-result').innerHTML = '<div class="result-empty"><p>Ingresá tu salario para estimar el aguinaldo.</p></div>'; return; }
   const r = calcAguinaldo({salario, semestre:agSem, fechaIngreso:$('ag-ingreso').value});
   const opts={day:'numeric',month:'short'};
   $('ag-result').innerHTML = `
@@ -1795,7 +1861,7 @@ function renderVacaciones(){
 }
 function calcVacacionesUI(){
   const ing = $('vac-ingreso').value;
-  if(!ing) return;
+  if(!ing){ $('vac-result').innerHTML = '<div class="result-empty"><p>Ingresá tu fecha de ingreso para calcular tus días.</p></div>'; return; }
   const r = calcVacaciones({fechaIngreso:ing, fechaActual:$('vac-actual').value});
   $('vac-result').innerHTML = `
     <div class="result-hero">
@@ -1835,7 +1901,11 @@ function renderIndemnizacion(){
 function calcIndemUI(){
   const salario = parseNum($('ind-salario').value);
   const ing=$('ind-ingreso').value, egr=$('ind-egreso').value;
-  if(!salario||!ing||!egr) return;
+  if(!salario||!ing||!egr){
+    const faltan = [!salario&&'el salario', !ing&&'la fecha de ingreso', !egr&&'la fecha de egreso'].filter(Boolean).join(', ');
+    $('ind-result').innerHTML = `<div class="result-empty"><p>Completá ${faltan} para ver la estimación.</p></div>`;
+    return;
+  }
   const r = calcIndemnizacion({salario, fechaIngreso:ing, fechaEgreso:egr});
   if(r.enPeriodoPrueba){
     $('ind-result').innerHTML = `
@@ -1960,7 +2030,8 @@ function renderCostoEmpresa(){
         </div>
       </div>
       <div class="field"><label class="field-label">Salario bruto mensual</label><div class="input-wrap"><span class="input-prefix">$</span><input class="input money" id="ce-salario" inputmode="numeric" placeholder="1.500.000" oninput="calcCostoUI()"></div></div>
-      <div class="field"><label class="field-label">Convenio</label><select class="select" id="ce-convenio" onchange="calcCostoUI()">${conv}</select></div>
+      <div class="field"><label class="field-label">Convenio <span class="field-hint">(costos sindicales a cargo de la empresa)</span></label><select class="select" id="ce-convenio" onchange="calcCostoUI()">${conv}</select></div>
+      <div class="field-hint" style="margin:-8px 0 4px">Las cuotas son aproximadas — cada gremio fija su valor. Si no aplica convenio, dejá "Fuera de convenio".</div>
       <div class="field"><label class="field-label">Antigüedad <span class="field-hint">(para provisionar vacaciones)</span></label><div class="input-wrap"><input class="input" id="ce-antiguedad" type="number" min="0" step="0.5" value="0" oninput="calcCostoUI()" style="padding-left:14px"><span class="input-prefix" style="left:auto;right:14px">años</span></div></div>
       <div class="field"><label class="field-label">Alícuota ART <span class="field-hint">(editable según actividad)</span></label><div class="input-wrap"><input class="input" id="ce-art" type="number" step="0.1" value="${PARAMS.art_default}" oninput="calcCostoUI()" style="padding-left:14px"><span class="input-prefix" style="left:auto;right:14px">%</span></div></div>
     </div>
@@ -1978,7 +2049,7 @@ let costoTipo='pyme';
 function setCostoTipo(t){costoTipo=t;document.querySelectorAll('#tool-body .toggle-opt').forEach(o=>o.classList.toggle('active',o.dataset.t===t));calcCostoUI();}
 function calcCostoUI(){
   const salario=parseNum($('ce-salario').value);
-  if(!salario) return;
+  if(!salario){ $('ce-result').innerHTML = '<div class="result-empty"><p>Ingresá el salario bruto para ver el costo total.</p></div>'; return; }
   const r=calcCostoEmpresa({salario, tipo:costoTipo, art:parseFloat($('ce-art').value)||PARAMS.art_default, convenioId:parseInt($('ce-convenio').value), anios:parseFloat($('ce-antiguedad').value)||0});
   const extra = r.costoMensual - r.bruto;
   const segs=[
@@ -2050,7 +2121,7 @@ let feeBase='mensual';
 function setFeeBase(b){feeBase=b;document.querySelectorAll('#tool-body .toggle-opt').forEach(o=>o.classList.toggle('active',o.dataset.b===b));calcFeeUI();}
 function calcFeeUI(){
   let salario=parseNum($('fee-salario').value);
-  if(!salario) return;
+  if(!salario){ $('fee-result').innerHTML = '<div class="result-empty"><p>Ingresá el salario para calcular tu honorario.</p></div>'; return; }
   const base = feeBase==='anual'?salario:salario*13; // recruiting suele ser sobre salario anual
   const r=calcFee({salario:base, fee:parseFloat($('fee-pct').value)||PARAMS.fee_default, conIva:$('fee-iva').checked});
   $('fee-result').innerHTML=`
@@ -2071,71 +2142,6 @@ function calcFeeUI(){
     </div>`;
 }
 
-/* ============================================================
-   RENDERER: CONVERSOR SALARIAL INTERNACIONAL
-   ============================================================ */
-function renderConversorInt(){
-  $('tool-body').innerHTML=`
-  <div class="calc-layout">
-    <div class="calc-panel tv-recruiters">
-      <h3><span class="pn">1</span> Salario de origen</h3>
-      <div class="field"><label class="field-label">Monto</label><div class="input-wrap"><span class="input-prefix" id="ci-prefix">US$</span><input class="input money" id="ci-monto" inputmode="numeric" placeholder="5.000" oninput="calcConvIntUI()" style="padding-left:42px"></div></div>
-      <div class="field"><label class="field-label">Moneda</label>
-        <div class="toggle-group">
-          <div class="toggle-opt active" data-c="usd" onclick="setCIMoneda('usd')">USD</div>
-          <div class="toggle-opt" data-c="ars" onclick="setCIMoneda('ars')">ARS</div>
-        </div>
-      </div>
-      <div class="field"><label class="field-label">Periodicidad</label>
-        <div class="toggle-group">
-          <div class="toggle-opt active" data-p="mensual" onclick="setCIPer('mensual')">Mensual</div>
-          <div class="toggle-opt" data-p="anual" onclick="setCIPer('anual')">Anual</div>
-        </div>
-      </div>
-      <div class="field"><label class="field-label">Tipo de cambio</label>
-        <select class="select" id="ci-tipo" onchange="calcConvIntUI()">
-          <option value="oficial">Oficial</option>
-          <option value="bolsa" selected>MEP</option>
-          <option value="contadoconliqui">CCL</option>
-        </select>
-      </div>
-    </div>
-    <div class="calc-panel">
-      <h3><span class="pn">2</span> Equivalencias</h3>
-      <div id="ci-result"><div class="result-empty">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/></svg>
-        <p>Ingresá un monto para ver las equivalencias.</p>
-      </div></div>
-    </div>
-  </div>`;
-  attachMoneyFormat('ci-monto');
-}
-let ciMoneda='usd', ciPer='mensual';
-function setCIMoneda(c){ciMoneda=c;document.querySelectorAll('#tool-body [data-c]').forEach(o=>o.classList.toggle('active',o.dataset.c===c));$('ci-prefix').textContent=c==='usd'?'US$':'$';calcConvIntUI();}
-function setCIPer(p){ciPer=p;document.querySelectorAll('#tool-body [data-p]').forEach(o=>o.classList.toggle('active',o.dataset.p===p));calcConvIntUI();}
-function calcConvIntUI(){
-  const monto=parseNum($('ci-monto').value);
-  if(!monto) return;
-  const rate=getRate($('ci-tipo').value);
-  if(!rate){toast('Esperando cotización…',true);return;}
-  let usd,ars;
-  if(ciMoneda==='usd'){ usd=monto; ars=monto*rate; }
-  else { ars=monto; usd=monto/rate; }
-  const usdM = ciPer==='anual'?usd/12:usd, usdA = ciPer==='anual'?usd:usd*12;
-  const arsM = ciPer==='anual'?ars/12:ars, arsA = ciPer==='anual'?ars:ars*12;
-  $('ci-result').innerHTML=`
-    <div class="result-hero r-recruiters">
-      <div class="rh-label">Equivalente en ${ciMoneda==='usd'?'pesos':'dólares'} (${ciPer})</div>
-      <div class="rh-value">${ciMoneda==='usd'?'<span class="cur">$</span>'+fmt(ciPer==='anual'?arsA:arsM):'<span class="cur">US$</span>'+fmt2(ciPer==='anual'?usdA:usdM)}</div>
-      <div class="rh-note">1 USD = $${fmt2(rate)} (${$('ci-tipo').selectedOptions[0].text})</div>
-    </div>
-    <div class="breakdown">
-      <div class="bd-row"><span class="bd-label">USD mensual</span><span class="bd-value">US$ ${fmt2(usdM)}</span></div>
-      <div class="bd-row"><span class="bd-label">USD anual</span><span class="bd-value">US$ ${fmt2(usdA)}</span></div>
-      <div class="bd-row"><span class="bd-label">ARS mensual</span><span class="bd-value">${money(arsM)}</span></div>
-      <div class="bd-row"><span class="bd-label">ARS anual</span><span class="bd-value">${money(arsA)}</span></div>
-    </div>`;
-}
 
 /* ============================================================
    HELPERS DE FORMULARIO
