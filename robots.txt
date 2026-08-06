@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://tools.growuphr.com.ar/sitemap.xml
+Sitemap: https://rubengioffre-lab.github.io/growup-tool/sitemap.xml
